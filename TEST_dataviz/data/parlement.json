@@ -1,0 +1,92 @@
+[
+    {
+        "id": "COM",
+        "legend": "Parti Communiste Français",
+        "name": "Parti Communiste Français",
+        "seats": 14
+    },
+    {
+        "id": "FI",
+        "legend": "La France Insoumise",
+        "name": "La France Insoumise",
+        "seats": 32
+    },
+    {
+        "id": "SOC",
+        "legend": "Parti Socialiste",
+        "name": "Parti Socialiste",
+        "seats": 62
+    },
+    {
+        "id": "RDG",
+        "legend": "Les Radicaux de Gauche",
+        "name": "Les Radicaux de Gauche",
+        "seats": 10
+    },
+        {
+        "id": "DVG",
+        "legend": "Divers Gauche",
+        "name": "Divers Gauche",
+        "seats": 0
+    },
+    {
+        "id": "ECO",
+        "legend": "Ecologistes",
+        "name": "Ecologistes",
+        "seats": 12
+    },
+    {
+        "id": "DIV",
+        "legend": "Divers",
+        "name": "Divers",
+        "seats": 8
+    },
+    {
+        "id": "REG",
+        "legend": "Divers",
+        "name": "Divers",
+        "seats": 5
+    },    
+    {
+        "id": "REM",
+        "legend": "La République en Marche",
+        "name": "La République en Marche",
+        "seats": 200
+    },
+    {
+        "id": "MDM",
+        "legend": "MoDem",
+        "name": "Mouvement Démocrate",
+        "seats": 30
+    },
+    {
+        "id": "UDI",
+        "legend": "UDI",
+        "name": "Union des démocrates indépendants",
+        "seats": 10
+    },
+    {
+        "id": "LR",
+        "legend": "Les Républicains",
+        "name": "Les Républicains",
+        "seats": 130
+    },
+    {
+        "id": "DVD",
+        "legend": "Divers Droite",
+        "name": "Divers Droite",
+        "seats": []
+    },
+    {
+        "id": "FN",
+        "legend": "Front National",
+        "name": "Front National",
+        "seats": 12
+    },
+    {
+        "id": "EXD",
+        "legend": "Extrême Droite",
+        "name": "Extrême Droite",
+        "seats": []
+    }
+]

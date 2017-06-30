@@ -1,0 +1,154 @@
+<html>
+<header>
+	<script type="text/javascript" src="js/d3.min.js"></script>
+</header>
+<head>
+	<meta charset="utf-8">
+	<title>Predict the Parliament</title>
+</head>
+<body>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h1>Predict The Parliament</h1>
+	</div>
+	
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<script src="js/d3-parliament-bydeputy.js" charset="utf-8"></script>
+
+    <!--script src="js/d3-parliament.js" charset="utf-8"></script-->
+    <link rel="stylesheet" media="screen" type="text/css" href="style/seats_color.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- FOR TOGGLE BUTTON -->
+	<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+	<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
+    <div class="panel-body">
+	    <div class="row">
+	    	<div class="col-md-7">
+				<svg class="hemicycle">
+					<!-- LEGEND of HEMICYCLE-->
+					<g class="legend" transform="translate(630,0)">
+					<circle cx="18" cy="15" r="7" style="fill: #d3913b; stroke: #d3913b; z-index:-10"></circle>
+					<text x="27" y="20" font-size="12" >DIV</text>
+					</g>
+					<g class="legend" transform="translate(630,25)">
+					<circle cx="18" cy="15" r="7" style="fill:#b30000; stroke:#990000; z-index:-10"></circle>
+					<text x="27" y="20" font-size="12" >COM</text>
+					</g>
+					<g class="legend" transform="translate(630,50)">
+					<circle cx="18" cy="15" r="7" style="fill: #ff1616; stroke: #ff1616; z-index:-10"></circle>
+					<text x="27" y="20" font-size="12">FI</text>
+					</g>
+					<g class="legend" transform="translate(630,75)">
+					<circle cx="18" cy="15" r="7" style="fill: #f76060; stroke: #f76060; z-index:-10"></circle>
+					<text x="27" y="20" font-size="12">SOC</text>
+					</g>
+					<g class="legend" transform="translate(630,100)">
+					<circle cx="18" cy="15" r="7" style="fill: #edafaf; stroke: #edafaf; z-index:-10"></circle>
+					<text x="27" y="20" font-size="12">RDG</text>
+					</g>
+					<g class="legend" transform="translate(630,125)">
+					<circle cx="18" cy="15" r="7" style="fill: #c66b9a; stroke: #c66b9a; z-index:-10"></circle>
+					<text x="27" y="20" font-size="12">DVG</text>
+					</g>
+					<g class="legend" transform="translate(630,150)">
+					<circle cx="18" cy="15" r="7" style="fill: #41992f; stroke: #41992f; z-index:-10"></circle>
+					<text x="27" y="20" font-size="12">ECO</text>
+					</g>
+					<g class="legend" transform="translate(630,175)">
+					<circle cx="18" cy="15" r="7" style="fill: #54422b; stroke: #54422b; z-index:-10"></circle>
+					<text x="27" y="20" font-size="12">REG</text>
+					</g>
+					<g class="legend" transform="translate(630,200)">
+					<circle cx="18" cy="15" r="7" style="fill: #f2da37; stroke: #f2da37; z-index:-10"></circle>
+					<text x="27" y="20" font-size="12">REM</text>
+					</g>
+					<g class="legend" transform="translate(630, 225)">
+					<circle cx="18" cy="15" r="7" style="fill:#ea681c; stroke: #ea681c; z-index:-10"></circle>
+					<text x="27" y="20" font-size="12">MDM</text>
+					</g>
+					<g class="legend" transform="translate(630,250)">
+					<circle cx="18" cy="15" r="7" style="fill: #537bbc; stroke: #537bbc; z-index:-10"></circle>
+					<text x="27" y="20" font-size="12">UDI</text>
+					</g>
+					<g class="legend" transform="translate(630,275)">
+					<circle cx="18" cy="15" r="7" style="fill: #3c589e; stroke: #3c589e; z-index:-10"></circle>
+					<text x="27" y="20" font-size="12">LR</text>
+					</g>
+					<g class="legend" transform="translate(630,300)">
+					<circle cx="18" cy="15" r="7" style="fill:#132553; stroke:#1a3372; z-index:-10"></circle>
+					<text x="27" y="20" font-size="12">DVD</text>
+					</g>
+					<g class="legend" transform="translate(630, 325)">
+					<circle cx="18" cy="15" r="7" style="fill: #03174a; stroke: #03174a; z-index:-10"></circle>
+					<text x="27" y="20" font-size="12">FN</text>
+					</g>
+					<g class="legend" transform="translate(630, 350)">
+					<circle cx="18" cy="15" r="7" style="fill: #7928b7; stroke: #7928b7; z-index:-10"></circle>
+					<text x="27" y="20" font-size="12">DLF</text>
+					</g>
+					<g class="legend" transform="translate(630, 375)">
+					<circle cx="18" cy="15" r="7" style="fill: #000a23; stroke: #000a23; z-index:-10"></circle>
+					<text x="27" y="20" font-size="12">EXD</text>
+					</g>
+				</svg>
+				<div id="imgtete"></div>
+			</div>
+			<div class="col-md-5" id="img-box"></div>
+		</div>
+		<div class="row">
+			<!-- the grid is based on 12 columns -->
+			<div class="baseline col-sm-7"></div>
+			<div class="col-md-5 hidden" id="img-histo">
+				<input checked id="toggle-btn" data-toggle="toggle" data-on="Age" data-off="Sexe" data-onstyle="success" data-offstyle="info" type="checkbox"> <!--onclick="getElementById('my_histo').src='img/histo_LR.png"-->
+			</div>
+		</div>
+	</div>
+
+	<!--script src="histogramme.js"></script-->
+    <script type="text/javascript">
+        var parliament = d3.parliament().width(700).height(350).innerRadiusCoef(0.4);
+        parliament.enter.fromCenter(true).smallToBig(true);
+        parliament.exit.toCenter(true).bigToSmall(true);
+        parliament.on("click", function(e) { console.log(e); });
+
+        var setData = function(d) {
+            d3.select("svg").datum(d).call(parliament);
+        };
+
+        d3.json("data/json_viz/french.json", setData);
+    </script>
+
+    <script type="text/javascript">
+    	d3.select("#img-histo").on("click", function(){
+    		//console.log("WORKING", d3.select(".toggle").attr("class").split(" ")[2]);
+    		var prev_btn = d3.select(".toggle").attr("class").split(" ")[2];
+    		var donnee = 'age';
+    		var parti = d3.select("#img-box").select("img")._groups[0][0].attributes.src.value.split("_")[1];
+
+    		if (prev_btn == "btn-success") {
+    			donnee = 'sexe';
+    		} else {
+				donnee = 'age';
+    		}
+
+
+
+            d3.select("#img-histo").selectAll("img").remove();
+            d3.select("#img-histo")
+              	.append('img')
+	            .attr("class", "histo")
+	            .attr("height", 150)
+              	.attr("src", "js/screenshots_histogrammes/" + donnee + "_" + parti);
+    	});
+    </script>
+
+</body>
+</html>
